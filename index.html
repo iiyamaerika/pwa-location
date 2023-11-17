@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>GPS情報を表示</title>
+      <link rel="manifest" href="manifest.json"/>
+      <script src="js/index.js" defer></script>
+  </head>
+  <body>
+      <!-- 位置情報表示部分 -->
+      <div id="txt">ここにデータを表示</div>
+      <br>
+      <script>
+        // PWA対応
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/pwa-location/sw.js').then(function(registration) {
+              // Registration was successful
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              // registration failed :(
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+      </script>
+  </body>
+
+</html>
