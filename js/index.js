@@ -10,10 +10,7 @@ navigator.geolocation.watchPosition( (position) => {
   enableHighAccuracy: true
 });
 
-
 // データを表示する displayData 関数
-
-
 function displayData(lat, lng, acc) {
   var txt = document.getElementById("txt");       // データを表示するdiv要素の取得
   txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"  // データ表示
