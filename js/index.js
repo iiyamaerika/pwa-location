@@ -10,6 +10,14 @@ navigator.geolocation.watchPosition( (position) => {
 });
 
 // データを表示する displayData 関数
+
+if (navigator.geolocation) {
+  alert("この端末では位置情報が取得できます");
+// Geolocation APIに対応していない
+} else {
+  alert("この端末では位置情報が取得できません");
+}
+
 function displayData(lat, lng, accu) {
   var txt = document.getElementById("txt");       // データを表示するdiv要素の取得
   txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"  // データ表示
