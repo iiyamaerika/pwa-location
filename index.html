@@ -28,7 +28,7 @@
           var acc = position.coords.accuracy;            // 緯度・経度の精度を取得
           displayData(lat, lng, acc);                    // displayData 関数を実行
         }, (error) => {
-          alert('GPS情報が取得できません．権限を確認してください')
+          alert('GPS情報が取得できません。権限を確認してください。')
         }, {
           enableHighAccuracy: true
         });
