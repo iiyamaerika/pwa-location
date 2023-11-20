@@ -13,6 +13,14 @@
       <div id="txt">ここにデータを表示</div>
       <br>
       <script>
+        // Geolocation APIに対応している
+        if (navigator.geolocation) {
+          alert("この端末では位置情報が取得できます");
+        // Geolocation APIに対応していない
+        } else {
+          alert("この端末では位置情報が取得できません");
+        }
+
         // PWA対応
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', function() {
