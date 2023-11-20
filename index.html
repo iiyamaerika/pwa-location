@@ -20,7 +20,7 @@
           alert("この端末では位置情報が取得できません");
         }
 
-        // GPS センサの値が変化したら何らか実行する geolocation.watchPosition メソッド
+        // GPS センサの値が変化したら実行する geolocation.watchPosition メソッド
         navigator.geolocation.watchPosition( (position) => {
           var lat  = position.coords.latitude;            // 緯度を取得
           var lng  = position.coords.longitude;           // 経度を取得
